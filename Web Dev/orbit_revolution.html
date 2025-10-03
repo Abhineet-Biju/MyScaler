@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <style>
+    .primary {
+      height: 500px;
+      width: 500px;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .sun {
+      background-color: orange;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      box-shadow: 0 0 30px #fdb813;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .orbit {
+      height: 200px;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: animation;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes animation {
+      from {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    .planet {
+      background-color: blue;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      box-shadow: 0 0 30px #0000ff;
+      position: absolute;
+      top: -15px;
+
+    }
+  </style>
+
+  <div class="primary">
+    <div class="sun"></div>
+    <div class="orbit">
+      <div class="planet"></div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
