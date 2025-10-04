@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile Card</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 600px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px grey;
+      display: flex;
+      align-items: center;
+      padding: 32px;
+      margin: 20px;
+    }
+
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-right: 32px;
+      text-align: center;
+    }
+
+    .right-column {
+      flex-grow: 1;
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 24px;
+      object-fit: cover;
+      background-color: #e0e0e0;
+      margin-bottom: 16px;
+    }
+
+    .left-column h2 {
+      margin: 0;
+      font-size: 1.6rem;
+      font-family: Georgia, serif;
+      font-weight: bold;
+      color: #1c1c1c;
+    }
+
+    .right-column p {
+      margin: 0 0 24px 0;
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .buttons a {
+      color: white;
+      background-color: blue;
+      padding: 12px 24px;
+      border-radius: 8px;
+      margin-right: 12px;
+      font-weight: 500;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .buttons a:hover {
+      background-color: teal;
+      transform: translateY(-2px);
+    }
+
+
+    @media (max-width: 680px) {
+      .card {
+        flex-direction: column;
+        width: 85vw;
+        padding: 24px;
+      }
+
+      .left-column {
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .right-column {
+        text-align: center;
+      }
+
+      .right-column p {
+        font-size: 1rem;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .buttons a {
+        width: 100%;
+        margin: 6px 0;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="left-column">
+      <img src="https://api.iconify.design/bi/person-fill.svg?color=%23888888" alt="Profile Pic" class="profile-image">
+      <h2>Abhineet Biju</h2>
+    </div>
+
+    <div class="right-column">
+      <p>Currently studying at Scaler.</p>
+      <div class="buttons">
+        <a href="#">Contact</a>
+        <a href="#">Portfolio</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
